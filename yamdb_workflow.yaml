@@ -42,7 +42,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: wueta/yamdb_final:latest 
+          tags: egorovmaksima/yamdb_final:latest 
 
 
   deploy:
@@ -59,7 +59,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         stack_file_name: docker-compose.yaml
         script: |
-          sudo docker pull wueta/yamdb_final
+          sudo docker pull egorovmaksima/yamdb_final
           sudo docker-compose stop
           sudo docker-compose rm web
           touch .env 
