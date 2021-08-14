@@ -1,8 +1,6 @@
 name: CI
 
-on:
-  push:
-    branches: [ master ]
+on: [push]
 
 jobs:
   tests:
@@ -44,7 +42,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: wueta/yamdb_final:latest 
+          tags: egorovmaksima/yamdb_final:latest 
 
 
   deploy:
@@ -61,7 +59,7 @@ jobs:
         passphrase: ${{ secrets.PASSPHRASE }}
         stack_file_name: docker-compose.yaml
         script: |
-          sudo docker pull wueta/yamdb_final
+          sudo docker pull egorovmaksima/yamdb_final
           sudo docker-compose stop
           sudo docker-compose rm web
           touch .env 
@@ -71,7 +69,7 @@ jobs:
           echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
           echo DB_HOST=${{ secrets.DB_HOST }} >> .env
           echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-          sudo docker-compose up -d
+          sudo docker-compose up -d 
 
   send_message:
     runs-on: ubuntu-latest
