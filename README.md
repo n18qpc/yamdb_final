@@ -50,10 +50,10 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 ## Автор
 
-* **Газизов Альфред**
+* **Егоров Максим**
 
 ## DockerHub
 
 Проект доступен по [ссылке](http://217.28.229.247/api/v1)
 
-[![CI](https://github.com/afg102rus/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/afg102rus/yamdb_final/actions/workflows/yamdb_workflow.yml)
+[![CI](https://github.com/n18qpc/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?branch=master)](https://github.com/n18qpc/yamdb_final/actions/workflows/yamdb_workflow.yml)
